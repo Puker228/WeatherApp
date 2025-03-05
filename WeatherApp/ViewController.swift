@@ -8,12 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var weatherLabel: UILabel!
+    @IBOutlet var getWeatherButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        getWeatherButton.addTarget(self, action: #selector(getWeather), for: .touchUpInside)
     }
 
-
+    @objc func getWeather() {
+        weatherLabel.text = "Tap"
+    }
 }
 
